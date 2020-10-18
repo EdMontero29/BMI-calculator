@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+    include ../COMPONENTES/head.pug
+body
+    include ../COMPONENTES/header.pug
+
+    .container-fluid
+        .row
+            .col-sm
+                
+                img.img-fluid(src="/imagenes/peso.jpg", alt="IMC" id="MainImage")
+               
+            .col-sm
+                 form
+                    .form-group
+                        label(for='Peso') Ingrese su peso
+                        input#Peso.form-control(type='text')
+                        label(for='Altura') Ingrese su altura
+                        input#Altura.form-control(type='text')
+                        br
+                        input.btn.btn-secondary.btn-lg(type="submit", value="calcular mi IMC")
+            .col-sm
+                h2.h2#subtitulo ¿Sabias sobre la formula del IMC?
+                p.lead 
+                |Una medida de la obesidad se determina mediante el índice de masa corporal (IMC)
+                |, que se calcula dividiendo los kilogramos de peso por el cuadrado de la estatura en metros 
+                |(IMC = peso [kg]/ estatura [m2])
+                |Según el Instituto Nacional del Corazón, los Pulmones y la Sangre de los Estados Unidos (NHLBI)
+                |, el sobrepeso se define como un IMC de más de 25. Se considera que una persona es obesa si su
+                |IMC es superior a 30. Usted puede determinar su IMC con la calculadora que se encuentra a 
+                | continuación. Con la cifra del IMC puede averiguar su composición corporal en la tabla que 
+                |aparece debajo de la calculadora.
+
+    include ../COMPONENTES/footer.pug
+
+                
+                  
+
+        
+        
