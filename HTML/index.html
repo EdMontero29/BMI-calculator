@@ -8,42 +8,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&amp;display=swap" rel="stylesheet"/>
     <title>calculadora IMC</title>
   </head>
+  <body>
+    <header>
+      <div class="jumbotron text-center" id="jumbo"><img class="rounded mx-auto" src="/imagenes/imc.png" alt="IMC" id="logo"/>
+        <h1 class="display-4" id="titulo">LA SALUD ES PRIMERO</h1>
+        <p class="text-muted">siempre es importante medir tus indices!</p>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm" id="Caja">
+          <h2 class="h2" id="subtitulo">¿Sabias sobre la formula del IMC?</h2>
+          <p class="lead">
+             Una medida de la obesidad se determina mediante el índice de masa corporal (IMC)
+            , que se calcula dividiendo los kilogramos de peso por el cuadrado de la estatura en metros 
+            (IMC = peso [kg]/ estatura [m2])
+            Según el Instituto Nacional del Corazón, los Pulmones y la Sangre de los Estados Unidos (NHLBI)
+            , el sobrepeso se define como un IMC de más de 25. Se considera que una persona es obesa si su
+            IMC es superior a 30. Usted puede determinar su IMC con la calculadora que se encuentra a 
+            continuación. Con la cifra del IMC puede averiguar su composición corporal en la tabla que 
+            aparece debajo de la calculadora.
+          </p>
+        </div>
+        <div class="col-sm"><img class="img-fluid" src="/imagenes/peso.jpg" alt="IMC" id="MainImage"/></div>
+        <div class="col-sm" id="Caja2">
+          <form id="form">
+            <div class="form-group">
+              <label for="peso">Ingrese su peso</label>
+              <input class="form-control" id="peso" type="number"/>
+              <label for="altura">Ingrese su altura</label>
+              <input class="form-control" id="altura" type="number"/>
+              <label for="altura">Resultado:</label>
+              <input class="form-control mb-2" id="resultado" type="number" disabled=""/><br/>
+              <input class="btn btn-secondary btn-lg" id="submit" type="submit" disabled="" value="calcular mi IMC"/>
+              <input class="btn btn-secondary btn-lg" id="limpiar" type="button" value="Limpiar formulario"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="py-4 bg-dark text-white-50" id="sticky-footer">
+        <div class="container text-center"><small>Copyright &copy; Calculadora IMC</small>
+          <script src="../JS/jquery-3.5.1.min.js"></script>
+          <script src="../JS/main.js"></script>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
-<body>
-  <header>
-    <div class="jumbotron text-center" id="jumbo"><img class="rounded mx-auto" src="/imagenes/imc.png" alt="IMC" id="logo"/>
-      <h1 class="display-4" id="titulo">LA SALUD ES PRIMERO</h1>
-      <p class="text-muted">siempre es importante medir tus indices!</p>
-    </div>
-  </header>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm"><img class="img-fluid" src="/imagenes/peso.jpg" alt="IMC" id="MainImage"/></div>
-      <div class="col-sm">
-        <form>
-          <div class="form-group">
-            <label for="Peso">Ingrese su peso</label>
-            <input class="form-control" id="Peso" type="text"/>
-            <label for="Altura">Ingrese su altura</label>
-            <input class="form-control" id="Altura" type="text"/><br/>
-            <input class="btn btn-secondary btn-lg" type="submit" value="calcular mi IMC"/>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm">
-        <h2 class="h2" id="subtitulo">¿Sabias sobre la formula del IMC?</h2>
-        <p class="lead"> </p>Una medida de la obesidad se determina mediante el índice de masa corporal (IMC)
-        , que se calcula dividiendo los kilogramos de peso por el cuadrado de la estatura en metros 
-        (IMC = peso [kg]/ estatura [m2])
-        Según el Instituto Nacional del Corazón, los Pulmones y la Sangre de los Estados Unidos (NHLBI)
-        , el sobrepeso se define como un IMC de más de 25. Se considera que una persona es obesa si su
-        IMC es superior a 30. Usted puede determinar su IMC con la calculadora que se encuentra a 
-        continuación. Con la cifra del IMC puede averiguar su composición corporal en la tabla que 
-        aparece debajo de la calculadora.
-      </div>
-    </div>
-  </div>
-  <footer class="py-4 bg-dark text-white-50" id="sticky-footer">
-    <div class="container text-center"><small>Copyright &copy; Calculadora IMC</small></div>
-  </footer>
-</body>

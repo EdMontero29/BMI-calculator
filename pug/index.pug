@@ -1,27 +1,14 @@
 <!DOCTYPE html>
 html(lang="en")
     include ../COMPONENTES/head.pug
-body
-    include ../COMPONENTES/header.pug
+    body
+      include ../COMPONENTES/header.pug
 
-    .container-fluid
+      .container-fluid
         .row
-            .col-sm
-                
-                img.img-fluid(src="/imagenes/peso.jpg", alt="IMC" id="MainImage")
-               
-            .col-sm
-                 form
-                    .form-group
-                        label(for='Peso') Ingrese su peso
-                        input#Peso.form-control(type='text')
-                        label(for='Altura') Ingrese su altura
-                        input#Altura.form-control(type='text')
-                        br
-                        input.btn.btn-secondary.btn-lg(type="submit", value="calcular mi IMC")
-            .col-sm
-                h2.h2#subtitulo ¿Sabias sobre la formula del IMC?
-                p.lead 
+          .col-sm#Caja
+            h2.h2#subtitulo ¿Sabias sobre la formula del IMC?
+            p.lead 
                 |Una medida de la obesidad se determina mediante el índice de masa corporal (IMC)
                 |, que se calcula dividiendo los kilogramos de peso por el cuadrado de la estatura en metros 
                 |(IMC = peso [kg]/ estatura [m2])
@@ -31,7 +18,28 @@ body
                 | continuación. Con la cifra del IMC puede averiguar su composición corporal en la tabla que 
                 |aparece debajo de la calculadora.
 
-    include ../COMPONENTES/footer.pug
+                
+          .col-sm
+            img.img-fluid(src="/imagenes/peso.jpg", alt="IMC" id="MainImage")
+               
+               
+          .col-sm#Caja2
+            form#form
+              .form-group
+                label(for='peso') Ingrese su peso
+                input#peso.form-control(type='number')
+                label(for='altura') Ingrese su altura
+                input#altura.form-control(type='number')
+                label(for='altura') Resultado:
+                input#resultado.form-control.mb-2(type='number' disabled='')
+                br
+                input.btn.btn-secondary.btn-lg#submit(type="submit" disabled='', value="calcular mi IMC")
+                input.btn.btn-secondary.btn-lg#limpiar(type="button" value="Limpiar formulario")
+               
+                 
+              
+
+        include ../COMPONENTES/footer.pug
 
                 
                   
